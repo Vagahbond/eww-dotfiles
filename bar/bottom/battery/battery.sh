@@ -18,13 +18,14 @@ fi
 
 if [ "$status" = "Charging" ]; then
 	icon="󰚥"
+    state="charging"
 else
 	icon="󰠠"
 fi
 
 
 if [ -s /sys/class/power_supply/BAT1/capacity ]; then
-    echo "{\"percent\": \"$per\", \"icon\": \"$icon\", \"charging\": \"$charging\", \"visible\": \"true\", \"state\": \"$state\"}"
+    echo "{\"percent\": \"$per\", \"icon\": \"$icon\", \"visible\": \"true\", \"state\": \"$state\"}"
 else
     echo "{\"visible\": \"false\" }"
 fi

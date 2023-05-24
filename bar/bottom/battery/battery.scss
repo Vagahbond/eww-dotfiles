@@ -1,24 +1,26 @@
 /* @include ("../mocha.scss"); */
 
 .battery {
-    background-color: $crust;
-    .battery-icon {
-        font-family: "Fira Code";
-        margin: 0.2em;
-        font-size: 25px;
-    }
+  background-color: $crust;
+  .battery-icon {
+    font-family: "Fira Code";
+    margin: 0.2em;
+    font-size: 25px;
+  }
 }
 
 .high {
-    color: $green;
+  color: $green;
 }
 
 .low {
-    color: $peach;
+  color: $peach;
 }
 
 .very-low {
-    color: $red;
+  color: $red;
 }
 
-
+.charging {
+  color: $blue;
+}
