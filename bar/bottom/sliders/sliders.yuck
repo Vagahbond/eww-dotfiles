@@ -6,7 +6,7 @@
 
 (defpoll brightness :interval "1s"
   :initial 100
-  "./bar/bottom/sliders/get_brightness.sh")
+"./bar/bottom/sliders/get_brightness.sh")
 
 
 (defwidget sliders []
@@ -43,10 +43,15 @@
     (box :orientation "h"
       :hexpand false
       
-      (label :text ""
-        :class "volume-icon"
-        :angle 90
-      :height 10)
+      (eventbox
+        :onclick "pavucontrol &"
+        (label :text ""
+          :class "volume-icon"
+          :angle 90
+        :height 10)
+      )
+      
+      
       
       (label :text "󰃟"
         :class "brightness-icon"
