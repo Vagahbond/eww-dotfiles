@@ -6,6 +6,7 @@
 
 @import "./mocha.scss";
 @import "./bottom/eww.scss";
+
 // EWW BAR
 .eww_bar {
   background-color: $background;
@@ -83,36 +84,44 @@
 .0:nth-child(3) {
   font-size: 1.5em;
 }
+
 .0:nth-child(2) {
   font-size: 1.4em;
 }
+
 .0:nth-child(4),
 .0:nth-child(5) {
   font-size: 1.6em;
 }
+
 .0:nth-child(6) {
   font-size: 1.7em;
 }
+
 .01,
 .011,
 .03,
 .033 {
   font-size: 1.5em;
 }
+
 .02,
 .022 {
   font-size: 1.4em;
 }
+
 .04,
 .05,
 .044,
 .055 {
   font-size: 1.6em;
 }
+
 .06,
 .066 {
   font-size: 1.7em;
 }
+
 // Clock
 .time {
   font-family: FiraCode Mono;
@@ -123,4 +132,14 @@
   border-radius: 5px;
   padding: 0.7rem 0 0.5rem 0;
   margin: 0.5rem 0 0.5rem 0;
+}
+
+// sliders
+scale trough {
+  all: unset;
+  background-color: $crust;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 6px;
+  margin: 0.3rem 0.3rem 0.3rem 0.3rem;
 }

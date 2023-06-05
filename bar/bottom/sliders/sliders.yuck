@@ -1,20 +1,60 @@
 
 
 (defpoll speaker-volume :interval "1s"
-                        :initial 100
-  "./bar/bottom/sliders/get_speaker_volume.sh")
+  :initial 100
+"./bar/bottom/sliders/get_speaker_volume.sh")
 
+(defpoll brightness :interval "1s"
+  :initial 100
+  "./bar/bottom/sliders/get_brightness.sh")
 
 
 (defwidget sliders []
-  (box :vexpand false :hexpand true :orientation "v"
-    (scale :class 'volume-slider'
-             :hexpand "true"
-             :min 0
-             :max 100
-             :height 8
-             :marks true
-             :value speaker-volume
-             :onchange "pamixer --set-volume {}")))
+  (box :orientation "v"
+    :space-evenly false
+    
+    (box :orientation "h"
+      
+      (scale
+        :class 'volume-slider'
+        :hexpand "true"
+        :min 0
+        :max 101
+        :height 30
+        :orientation "v"
+        :flipped true
+        :value speaker-volume
+        :tooltip "Volume: ${speaker-volume}"
+      :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%")
+      
+      (scale
+        :class 'brightness-slider'
+        :hexpand "true"
+        :min 0
+        :max 101
+        :height 30
+        :orientation "v"
+        :flipped true
+        :value brightness
+        :tooltip "Brightness: ${brightness}"
+      :onchange "light -S {}")
+    )
+    
+    (box :orientation "h"
+      :hexpand false
+      
+      (label :text ""
+        :class "volume-icon"
+        :angle 90
+      :height 10)
+      
+      (label :text "󰃟"
+        :class "brightness-icon"
+        :angle 90
+      :height 10)
+      
+    )
+  )
+)
 
 
