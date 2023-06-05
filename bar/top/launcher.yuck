@@ -2,6 +2,6 @@
 (defwidget launcher []
 	(box :orientation "v" 
 		 :space-evenly "false" 
-		 :spacing -15
+		 ; :spacing -15
   	(button :class "launcher_icon" 
 		   	:onclick "wofi --show=drun --line=5 --prompt='' &"  "")))

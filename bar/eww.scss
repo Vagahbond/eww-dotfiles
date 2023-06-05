@@ -1,12 +1,13 @@
 // Global
-*{
+* {
   all: unset;
+  padding: 0;
 }
 
-@import './mocha.scss';
-@import './bottom/eww.scss';
+@import "./mocha.scss";
+@import "./bottom/eww.scss";
 // EWW BAR
-.eww_bar{
+.eww_bar {
   background-color: $background;
   padding: 5px;
   margin: 0;
@@ -17,36 +18,54 @@
 }
 
 .eww_bar.tiled {
-    border-radius: 12px;
-    border-width: 1px;
-    border-color: $mauve;
-    border-style: solid;
-    margin: 5px;
-    padding: 0;
-} 
-
-// Launcher
-.launcher_icon{
-    color: $mauve;
-    font-family: "Fira Code";
-    font-size: 2.5em;
-    padding: 1rem 0 1rem 0;
-//    cursor: pointer;
+  border-radius: 12px;
+  border-width: 1px;
+  border-color: $mauve;
+  border-style: solid;
+  margin: 5px;
+  padding: 0;
 }
 
+// Launcher
+.launcher_icon {
+  color: $mauve;
+  font-family: "Fira Code Nerd Font Mono";
+  font-size: 40px;
+  // border-width: 1px;
+  // border-color: $mauve;
+  // border-style: solid;
 
-.0 , .01, .02, .03, .04, .05, .06,
-.011, .022, .033, .044, .055, .066{
-  margin: .55rem 0 .55rem 0;
+  //    cursor: pointer;
+}
+
+.0,
+.01,
+.02,
+.03,
+.04,
+.05,
+.06,
+.011,
+.022,
+.033,
+.044,
+.055,
+.066 {
+  margin: 0.55rem 0 0.55rem 0;
 }
 
 /* Unoccupied */
 .0 {
-color: $base;
+  color: $base;
 }
 
 /* Occupied */
-.01, .02, .03, .04, .05, .06 {
+.01,
+.02,
+.03,
+.04,
+.05,
+.06 {
   color: $base;
 }
 
@@ -61,37 +80,37 @@ color: $base;
 }
 
 .0:nth-child(1),
-.0:nth-child(3){
+.0:nth-child(3) {
   font-size: 1.5em;
 }
-.0:nth-child(2){
+.0:nth-child(2) {
   font-size: 1.4em;
 }
 .0:nth-child(4),
-.0:nth-child(5){
+.0:nth-child(5) {
   font-size: 1.6em;
 }
-.0:nth-child(6){
+.0:nth-child(6) {
   font-size: 1.7em;
 }
 .01,
 .011,
 .03,
-.033{
+.033 {
   font-size: 1.5em;
 }
 .02,
-.022{
+.022 {
   font-size: 1.4em;
 }
 .04,
 .05,
 .044,
-.055{
+.055 {
   font-size: 1.6em;
 }
 .06,
-.066{
+.066 {
   font-size: 1.7em;
 }
 // Clock
@@ -102,7 +121,6 @@ color: $base;
   background-color: $base;
   color: $text;
   border-radius: 5px;
-  padding: .7rem 0 .5rem 0;
-  margin: .5rem 0 .5rem 0;
+  padding: 0.7rem 0 0.5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
-
