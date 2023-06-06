@@ -1,12 +1,14 @@
+(defpoll volume
+  :interval "1s"
+  :initial "{ \"muted\": false, \"value\": \"95\" }"
+  "./bar/bottom/sliders/get_speaker_volume.sh"
+)
 
-
-(defpoll speaker-volume :interval "1s"
+(defpoll brightness
+  :interval "1s"
   :initial 100
-"./bar/bottom/sliders/get_speaker_volume.sh")
-
-(defpoll brightness :interval "1s"
-  :initial 100
-"./bar/bottom/sliders/get_brightness.sh")
+  "./bar/bottom/sliders/get_brightness.sh"
+)
 
 
 (defwidget sliders []
@@ -16,16 +18,17 @@
     (box :orientation "h"
       
       (scale
-        :class 'volume-slider'
+        :class "volume-slider ${volume.muted ? "muted" : ""}"
         :hexpand "true"
         :min 0
         :max 101
         :height 30
         :orientation "v"
         :flipped true
-        :value speaker-volume
-        :tooltip "Volume: ${speaker-volume}"
-      :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%")
+        :value {volume.value}
+        :tooltip "Volume: ${volume.value}"
+        :onchange "wpctl set-volume @DEFAULT_AUDIO_SINK@ {}%"
+      )
       
       (scale
         :class 'brightness-slider'
@@ -37,7 +40,8 @@
         :flipped true
         :value brightness
         :tooltip "Brightness: ${brightness}"
-      :onchange "light -S {}")
+        :onchange "light -S {}"
+      )
     )
     
     (box :orientation "h"
@@ -45,10 +49,11 @@
       
       (eventbox
         :onclick "pavucontrol &"
-        (label :text ""
+        (label :text "${volume.muted ? "󰝟": ""}"
           :class "volume-icon"
           :angle 90
-        :height 10)
+          :height 10
+        )
       )
       
       
@@ -56,7 +61,8 @@
       (label :text "󰃟"
         :class "brightness-icon"
         :angle 90
-      :height 10)
+        :height 10
+      )
       
     )
   )

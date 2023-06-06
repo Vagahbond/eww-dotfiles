@@ -3,9 +3,9 @@
 handle (){
 
 
-  ACTIVE_WORKSPACE=$(hyprctl monitors | grep -m1 "active workspace:" | grep -o "(.\+)" | grep -o "[^()]")
+  ACTIVE_WORKSPACE=$(hyprctl monitors -j | jq '.[] | select(.name=="eDP-1") | .activeWorkspace.id')
 
-  NB_WINDOWS=$(hyprctl workspaces | grep -a1 "workspace ID .\+ (${ACTIVE_WORKSPACE})" | grep "windows: " | grep -o "[0-9]\+")
+  NB_WINDOWS=$(hyprctl clients -j | jq "[.[] | select(.workspace.id==${ACTIVE_WORKSPACE} and .floating==false)] | length")
 
   if [[ ${NB_WINDOWS} = 1 ]]; then
       mode="fullscreen"

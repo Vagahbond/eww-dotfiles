@@ -3,10 +3,15 @@
   border-radius: 5px;
 }
 
+.volume-slider.muted trough highlight {
+  background-color: $crust;
+  border-radius: 5px;
+}
+
 .volume-icon {
   color: $mauve;
-  font-size: 12px;
-  padding-top: 5px;
+  font-size: 15px;
+  padding-top: 7px;
 }
 
 .brightness-slider trough highlight {
@@ -17,5 +22,5 @@
 .brightness-icon {
   color: $blue;
   font-size: 15px;
-  padding-top: 5px;
+  padding-top: 7px;
 }
