@@ -2,14 +2,14 @@
 ; (include ".bar/middle/eww.yuck")
 (include "./bar/bottom/eww.yuck")
 
-(deflisten display_mode    
-                    :initial '{ }'
-                    "tail -F /tmp/display_mode 2> /dev/null" )
+(deflisten display_mode :initial "{ \"mode\": \"tiled\" }" "bash ./bar/get_display_mode.sh" )
 
 ;; Bar Widgets ;;
 (defwidget bar []
-	(box :class "eww_bar ${display_mode.mode}" 
-		 :orientation "v" 
-(top)
-(bottom)))
+  (box :class "eww_bar ${display_mode.mode}"
+    :orientation "v"
+    (top)
+    (bottom)
+  )
+)
 
