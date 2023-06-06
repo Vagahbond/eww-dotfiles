@@ -1,0 +1,25 @@
+.workspaces-widget {
+    font-family: FiraCode Mono;
+    font-size: 20px;
+    color: $mauve;
+}
+
+.workspace-entry {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    background-color: $crust;
+}
+
+.workspace-entry.occupied {
+    background-color: $mauve;
+    color: $crust;
+
+}
+
+.workspace-entry.current {
+    border: solid 1px $mauve;
+    background-color: $background;
+    color: $mauve;
+
+}

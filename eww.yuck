@@ -10,7 +10,7 @@
 						:y "0" 
 						:height "100%" 
 						:width "40px")
-	:monitor 0
+	:monitor 1
 	:wm-ignore false
 	:stacking "fg"
 	:exclusive false
