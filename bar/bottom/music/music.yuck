@@ -1,0 +1,24 @@
+; (defpoll song :interval "2s"  "~/.config/eww/bar/scripts/music_info --song")
+; (defpoll song_artist :interval "2s"  "~/.config/eww/bar/scripts/music_info --artist")
+; (defpoll current_status :interval "1s"  "~/.config/eww/bar/scripts/music_info --time")
+; (defpoll song_status :interval "2s"  "~/.config/eww/bar/scripts/music_info --status")
+; (defpoll cover_art :interval "2s"  "~/.config/eww/bar/scripts/music_info --cover")
+
+(defwidget music []
+  (box :class "music-box"
+    (circular-progress
+      :tooltip "Spotify"
+      :value 100
+      :height 40
+      :thickness 3
+      :clockwise true
+      :class "music"
+      (box
+        :class "song_cover_art"
+        :vexpand "false"
+        :hexpand "false"
+        :style "background-image: url('/home/vagahbond/Pictures/pp.jpg');background-size: cover;")
+    )
+  )
+)
+

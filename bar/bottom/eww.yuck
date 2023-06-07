@@ -4,6 +4,7 @@
 (include "./bar/bottom/ram/ram.yuck")
 (include "./bar/bottom/wifi/wifi.yuck")
 (include "./bar/bottom/sliders/sliders.yuck")
+(include "./bar/bottom/music/music.yuck")
 
 
 ;; Bottom Widgets ;;
@@ -13,6 +14,7 @@
 		    :space-evenly "false"
             :valign "end"
             :width 40
+            (music)
             (sliders)
             (wifi)
             (cpu)

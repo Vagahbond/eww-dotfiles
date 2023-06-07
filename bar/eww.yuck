@@ -1,5 +1,4 @@
 (include "./bar/top/eww.yuck")
-; (include ".bar/middle/eww.yuck")
 (include "./bar/bottom/eww.yuck")
 
 (deflisten display_mode :initial "{ \"mode\": \"tiled\" }" "bash ./bar/get_display_mode.sh" )
