@@ -1,9 +1,27 @@
-// .music-box {
-//     background-color: red;
-// }
+.music-box {
+    padding: 5px;
+}
+
+.artist-initials {
+    color: $mauve;
+    font-size: 15px;
+}
+
+.play-pause {
+    color: $mauve;
+}
+
+.song-cover-art {
+    background-image: url('/home/vagahbond/Pictures/pp.jpg');
+    background-size: cover;
+}
 
 .music {
     color: $mauve;
     background-color: $crust;
   }
   
+.next-previous {
+    color: $mauve;
+    font-size: 20px;
+}
