@@ -145,6 +145,16 @@ scale trough {
   margin: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 
+// sliders
+progressbar > trough {
+  all: unset;
+  background-color: $crust;
+  border-radius: 5px;
+  min-height: 4px;
+  min-width: 30px;
+  margin: 0.3rem 0.1rem 0.3rem 0.1rem;
+}
+
 tooltip {
   background-color: $background;
   color: $mauve;

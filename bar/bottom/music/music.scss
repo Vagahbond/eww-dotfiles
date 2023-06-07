@@ -12,16 +12,31 @@
 }
 
 .song-cover-art {
-    background-image: url('/home/vagahbond/Pictures/pp.jpg');
+    // background-image: url('/home/vagahbond/Pictures/pp.jpg');
     background-size: cover;
 }
 
 .music {
     color: $mauve;
     background-color: $crust;
-  }
-  
+}
+
 .next-previous {
     color: $mauve;
     font-size: 20px;
+    padding-top: 10px;
+
+}
+
+// .progress {
+//     background-color: $mauve;
+// }
+
+.progress trough highlight{
+
+    background-color: $mauve;
+}
+
+.upper-section {
+    padding-bottom: 10px;
 }

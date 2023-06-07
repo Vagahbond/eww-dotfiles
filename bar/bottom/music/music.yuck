@@ -11,6 +11,7 @@
 (defwidget music []
   (box :class "music-box"
     :orientation "V"
+    :space-evenly false
     
     
     (box
@@ -48,6 +49,8 @@
       
     )
     
+    
+    
     (box
       :class "next-previous"
       :orientation "H"
@@ -63,6 +66,14 @@
         :class "next"
         "󰒭"
       )
+    )
+
+    (progress
+      :class "progress"
+      :value 10000
+      :flipped false
+      :orientation "h"
+
     )
     
   )
