@@ -19,6 +19,6 @@ Fullscreen mode:
 2) If you want to use other widgets alognside this bar, you can just paste the content of `eww.yuck` in yours, and it should import the files correctly. Same applies for the scss file.
 
 ### Adaptive bar
-The bar adapts to windows taking the screen's whole space. It creates gaps with the border whenever sever windows are tiled on the screen.
+The bar adapts to windows taking the screen's whole space. It creates gaps with the border whenever several windows are tiled on the screen.
 
 ### Colors
