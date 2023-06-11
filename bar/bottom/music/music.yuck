@@ -4,76 +4,95 @@
 (defpoll song_name :interval "4s"  "playerctl -p spotify metadata xesam:title")
 (defpoll state :interval "1s"  "playerctl -p spotify status")
 (defpoll cover_art :interval "3s"  "./bar/bottom/music/art_management.sh")
+
+(defvar show_controls false)
 ; (defpoll song_name :interval "2s"  "~/.config/eww/bar/scripts/music_info --status")
 
-
+; TODO: Don't render when spotify is off 
+; TODO: Make the progress bar work
+; TODO: Replace initial with shuffle button
+; TODO: Try using streams instead of polls
 
 (defwidget music []
-  (box :class "music-box"
-    :orientation "V"
-    :space-evenly false
+  (eventbox
+    :onhover "eww update show_controls=true -c ."
+    :onhoverlost "eww update show_controls=false -c ."
     
-    
-    (box
-      :class "upper-section"
-      :orientation "H"
+    (box :class "music-box"
+      :orientation "V"
+      :space-evenly false
       
-      (label
-        :class "artist-initials"
-        :tooltip song_artist
-        :text song_artist_initials
+      (circular-progress
+        :tooltip "${song_artist} - ${song_name}"
+        :value 100
+        :height 33
+        
+        :thickness 2
+        :clockwise true
+        :class "music"
+        
+        (box
+          :class "song-cover-art"
+          :vexpand "false"
+          :hexpand "false"
+          :style "background-image: url('${cover_art}');"
+        )
       )
       
-      (button
-        :onclick "playerctl -p spotify play-pause"
-        :class "play-pause"
-        "${state == "Playing" ? "" : ""}"
+      
+      
+      (revealer
+        :transition "slideup"
+        :reveal show_controls
+        
+        (box
+          :orientation "v"
+          
+          (box
+            :class "upper-section"
+            :orientation "H"
+            
+            (label
+              :class "artist-initials"
+              :tooltip song_artist
+              :text "${song_artist_initials != "" ? song_artist_initials : ""}"
+            )
+            
+            (button
+              :onclick "playerctl -p spotify play-pause"
+              :class "play-pause"
+              "${state == "Playing" ? "" : ""}"
+            )
+          )
+          
+          (box
+            :class "next-previous"
+            :orientation "H"
+            
+            (button
+              :class "previous"
+              :onclick "playerctl -p spotify previous"
+              "󰒮"
+            )
+            
+            (button
+              :onclick "playerctl -p spotify next"
+              :class "next"
+              "󰒭"
+            )
+          )
+        )
+        
+        
       )
-    )
-    
-    (circular-progress
-      :tooltip "${song_artist} - ${song_name}"
-      :value 100
-      :height 33
       
-      :thickness 2
-      :clockwise true
-      :class "music"
-      
-      (box
-        :class "song-cover-art"
-        :vexpand "false"
-        :hexpand "false"
-        :style "background-image: url('${cover_art}');"
+      (progress
+        :class "progress"
+        :value 50.5
+        :flipped false
+        :orientation "h"
+        
       )
-      
-    )
-    
-    
-    
-    (box
-      :class "next-previous"
-      :orientation "H"
-      
-      (button
-        :class "previous"
-        :onclick "playerctl -p spotify previous"
-        "󰒮"
-      )
-      
-      (button
-        :onclick "playerctl -p spotify next"
-        :class "next"
-        "󰒭"
-      )
-    )
-
-    (progress
-      :class "progress"
-      :value 10000
-      :flipped false
-      :orientation "h"
-
     )
     
   )
