@@ -24,19 +24,22 @@
 .next-previous {
     color: $mauve;
     font-size: 20px;
-    padding-top: 10px;
+    // padding-top: 10px;
 
 }
 
-// .progress {
-//     background-color: $mauve;
-// }
+.progress {
+    padding-top: 5px;
+    
+    trough {
+        background-color: $crust;
+        border-radius: 5px;
+    }
 
-.progress trough highlight{
+    progress {
+        background-color: $mauve;
+        border-radius: 5px;
+    }
 
-    background-color: $mauve;
 }
 
-.upper-section {
-    padding-bottom: 10px;
-}
