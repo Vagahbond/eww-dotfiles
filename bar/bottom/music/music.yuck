@@ -4,6 +4,7 @@
 (defpoll song_name :interval "4s"  "playerctl -p spotify metadata xesam:title")
 (defpoll state :interval "1s"  "playerctl -p spotify status")
 (defpoll cover_art :interval "3s"  "./bar/bottom/music/art_management.sh")
+(defpoll position_percentage :interval "3s"  "zsh ./bar/bottom/music/current_position.sh")
 
 (defvar show_controls false)
 ; (defpoll song_name :interval "2s"  "~/.config/eww/bar/scripts/music_info --status")
@@ -88,7 +89,7 @@
       
       (progress
         :class "progress"
-        :value 50.5
+        :value position_percentage
         :flipped false
         :orientation "h"
         
