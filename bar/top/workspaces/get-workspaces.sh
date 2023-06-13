@@ -11,8 +11,9 @@ spaces (){
         | sed -E 's/lastwindow\":\"[^{]*WhatsApp[^}]*\",/lastwindow":"",/g' \
         | sed -E 's/lastwindow\":\"[^{]*Spotify[^}]*\",/lastwindow":"",/g' \
         | sed -E 's/lastwindow\":\"[^{]*(bash|zsh|vagahbond@framework)[^}]*\",/lastwindow":"",/g' \
-        | sed -E 's/lastwindow\":\"[^{]* Mozilla Firefox\",/lastwindow":"󰈹",/g' \
-        | sed -E 's/lastwindow\":\"{0,1}[^{}"]{2,}\"{0,1},/lastwindow":false,/g' 
+        | sed -E 's/lastwindow\":\"[^{]*Mozilla Firefox\",/lastwindow":"󰈹",/g' \
+        | sed -E 's/lastwindow\":\"{0,1}[^{}"]{2,}\"{0,1},/lastwindow":false,/g' \
+        | sed -E 's/lastwindow\":\"\",/lastwindow":false,/g' 
 
 
 }

@@ -24,15 +24,15 @@
   background-color: $mauve;
 }
 
-.workspace-entry:not(.eDP-1) {
+.workspace-entry:not(.eDP-1):not(.null) {
   color: $blue;
 }
 
-.workspace-entry.occupied:not(.eDP-1) {
+.workspace-entry.occupied:not(.eDP-1):not(.null) {
   border: solid 2px $blue;
 }
 
-.workspace-entry.current:not(.eDP-1) {
+.workspace-entry.current:not(.eDP-1):not(.null) {
   color: $background;
   background-color: $blue;
 }
