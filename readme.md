@@ -3,6 +3,8 @@
 This is the eww bar configuration I made the rice I use on my daily driver. 
 
 It currently runs on NixOS but this configuration is made so that it can be used on any type of setup. 
+!!SCREENSHOTS ARE OUTDATED!!
+
 Tiled mode:
 ![1686071642_grim](https://github.com/Vagahbond/eww-dotfiles/assets/56230065/08046c3f-d7f7-475d-9f1d-b1fdc3dbc2a0)
 
