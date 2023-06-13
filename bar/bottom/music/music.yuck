@@ -6,13 +6,11 @@
 (defpoll is_spotify_open :initial false :interval "3s" "if [[ -n $(playerctl -l  | grep -o spotify ) ]]; then echo 'true'; else echo 'false'; fi")
 (deflisten shuffling "playerctl shuffle -F")
 (defvar show_controls false)
-; (defpoll song_name :interval "2s"  "~/.config/eww/bar/scripts/music_info --status")
-; TODO: Replace initial with shuffle button
 
 (defwidget music []
   (expander
     :expanded is_spotify_open
-
+    
     (eventbox
       :onhover "eww update show_controls=true -c ."
       :onhoverlost "eww update show_controls=false -c ."
