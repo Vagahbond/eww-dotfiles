@@ -20,7 +20,24 @@
 }
 
 .workspace-entry.current {
-
   color: $background;
   background-color: $mauve;
+}
+
+.workspace-entry:not(.eDP-1) {
+  color: $blue;
+}
+
+.workspace-entry.occupied:not(.eDP-1) {
+  border: solid 2px $blue;
+}
+
+.workspace-entry.current:not(.eDP-1) {
+  color: $background;
+  background-color: $blue;
+}
+
+.logo {
+  font-size: 17px;
+  padding: 5px 3px 5px 0px;
 }
