@@ -1,0 +1,12 @@
+;; Clock Widgets ;;
+(defwidget clock []
+  (box :class "clock"
+    :orientation "v"
+    (label
+        :text test
+        :justify "center"
+        :xalign 0.5
+        :yalign 0.5)
+  )
+)
+

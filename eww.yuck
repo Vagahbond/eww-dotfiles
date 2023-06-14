@@ -11,11 +11,20 @@
 						:height "100%" 
 						:width "40px")
 	:monitor 0
-	:wm-ignore false
 	:stacking "fg"
 	:exclusive false
 	:focusable false 
-	:windowtype "dock"
+(bar))
+
+(defwindow clock
+	:geometry (geometry :x "40%" 
+						:y "30%" 
+						:height "20%" 
+						:width "40%")
+	:monitor 0
+	:stacking "fg"
+	:exclusive false
+	:focusable false
 (bar))
 
 

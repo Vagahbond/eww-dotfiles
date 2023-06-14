@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 CURRENT_POS=$(playerctl -p spotify position)
 
 if [ ! -f /tmp/cover_art.png ] || [ ${CURRENT_POS%.*} -lt 6 ]; then
