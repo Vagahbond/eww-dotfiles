@@ -125,7 +125,7 @@
   font-family: FiraCode Mono;
   font-weight: bold;
   font-size: 1.2em;
-  background-color: $base;
+  // background-color: $base;
   color: $text;
   border-radius: 5px;
   padding: 0.7rem 0 0.5rem 0;
@@ -153,6 +153,9 @@ progressbar > trough {
 }
 
 tooltip {
-  background-color: $background;
+  padding: 4px;
+  border-radius: 14px;
+
+  background-color: rgba($background, 0.8);
   color: $mauve;
 }
