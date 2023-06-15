@@ -4,6 +4,7 @@
 
 ;; Bar Windows ;;
 (include "./bar/eww.yuck")
+(include "./clock/clock.yuck")
 
 (defwindow bar
 	:geometry (geometry :x "0" 
@@ -17,15 +18,15 @@
 (bar))
 
 (defwindow clock
-	:geometry (geometry :x "40%" 
-						:y "30%" 
+	:geometry (geometry :x "30%" 
+						:y "10%" 
 						:height "20%" 
 						:width "40%")
 	:monitor 0
-	:stacking "fg"
+	:stacking "bg"
 	:exclusive false
 	:focusable false
-(bar))
+(clock))
 
 
 

@@ -1,12 +1,41 @@
+; (defpoll hour	:interval "1s"	"date '+%H'")
+; (defpoll min	:interval "1s"	"date '+%M'")
+(defpoll seconds	:interval "1s"	"date '+%S'")
+(defpoll quote :interval "99999999s" "hyprctl splash")
+
 ;; Clock Widgets ;;
 (defwidget clock []
-  (box :class "clock"
+  (box :class "clock-box"
     :orientation "v"
+    :space-evenly false
+
     (label
-        :text test
-        :justify "center"
+        :class "clock-writing"
+        :text "${hour}:${min}:${seconds}"
         :xalign 0.5
-        :yalign 0.5)
+        :yalign 0.5
+    )
+(box :class "quote-box"
+    :orientation "v"
+    :space-evenly false
+
+
+    (label
+        :class "quote"
+        :text "\"${quote}\""
+        :xalign 0.5
+        :yalign 0.5
+        :wrap true
+    )
+
+    (label
+        :class "credits"
+        :text "~ Vaxry."
+        :xalign 1
+        :yalign 0.5
+        :wrap true
+    )
+)
   )
 )
 

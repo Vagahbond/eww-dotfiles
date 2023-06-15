@@ -1,0 +1,33 @@
+@import "./mocha.scss";
+
+.clock-box {
+  background-color: rgba(30, 30, 46, 0);
+  background: transparent;
+}
+
+.clock-writing {
+  background-color: rgba(30, 30, 46, 0.4);
+  border-radius: 14px;
+  color: $mauve;
+  font-family: "Fira Code Nerd Font Mono";
+  font-size: 60px;
+  margin: 20px;
+  box-shadow: 0.5rem 0.5rem 3px -3px $crust, 0 0 #ccc;
+}
+
+.quote-box {
+  background-color: rgba(30, 30, 46, 0.4);
+  border-radius: 14px;
+  color: $mauve;
+  font-family: "Fira Code Nerd Font Mono";
+  font-size: 22px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0.5rem 0.5rem 3px -3px $crust, 0 0 #ccc;
+}
+
+.credits {
+  margin-top: 10px;
+  font-family: "Fira Code Nerd Font Mono";
+  font-style: italic;
+}
