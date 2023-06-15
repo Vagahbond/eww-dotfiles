@@ -6,7 +6,7 @@
 }
 
 .clock-writing {
-  background-color: rgba(30, 30, 46, 0.4);
+  background-color: rgba($background, 0.4);
   border-radius: 14px;
   color: $mauve;
   font-family: "Fira Code Nerd Font Mono";
@@ -16,7 +16,7 @@
 }
 
 .quote-box {
-  background-color: rgba(30, 30, 46, 0.4);
+  background-color: rgba($background, 0.4);
   border-radius: 14px;
   color: $mauve;
   font-family: "Fira Code Nerd Font Mono";
