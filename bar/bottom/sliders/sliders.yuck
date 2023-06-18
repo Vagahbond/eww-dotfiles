@@ -1,12 +1,12 @@
 (defpoll volume
   :interval "1s"
-  :initial "{ \"muted\": false, \"value\": \"95\" }"
+  :initial "{ \"muted\": false, \"value\": 50.0 }"
   "zsh ./bar/bottom/sliders/get_speaker_volume.sh"
 )
 
 (defpoll brightness
   :interval "1s"
-  :initial 100
+  :initial 50.0
   "zsh ./bar/bottom/sliders/get_brightness.sh"
 )
 

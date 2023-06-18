@@ -10,3 +10,4 @@ else
 fi
 
 echo "{ \"muted\": ${MUTED}, \"value\": ${VOLUME} }"
+
