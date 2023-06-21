@@ -1,4 +1,4 @@
-(deflisten status :initial '{"artist": "artist", "title": "Title", "status": "Paused", "cover": "/tmp/cover_art.png", "shuffle": "true"}' "./bar/bottom/music/get_status.sh")
+(deflisten status :initial '{"artist": "artist", "title": "Title", "status": "", "cover": "/tmp/cover_art.png", "shuffle": "true"}' "./bar/bottom/music/get_status.sh")
 (deflisten position_percentage :initial 0 "./bar/bottom/music/current_position.sh")
 
 (defvar show_controls false)
