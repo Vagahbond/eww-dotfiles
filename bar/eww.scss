@@ -10,7 +10,7 @@
 
 // EWW BAR
 .eww_bar {
-  background-color: $background;
+  background-color: rgba($background, 0.61);
   padding: 5px;
   margin: 0;
   transition-property: all;
@@ -21,13 +21,14 @@
 
 .eww_bar.tiled {
   border-radius: 12px;
-  border-width: 2px;
+  border-width: 0px;
   border-color: $mauve;
   border-style: solid;
   margin: 5px;
   padding: 0;
-  box-shadow: 0.5rem 0.5rem 3px -3px $crust, 0 0 #ccc;
-  background-color: rgba($background, 0.8);
+  box-shadow: 0.5rem 0.5rem 3px -3px rgba($crust, 0.6), 0 0 #ccc;
+
+  background-color: rgba($background, 0.61);
 }
 
 // Launcher
