@@ -12,6 +12,6 @@
                         :value {battery.percent} 
                         :thickness 3
                         :clockwise true
-                        :class "${battery.state} battery"
+                        :class "battery ${battery.state}"
      (label :class "battery-icon" :text {battery.icon}))))
 

@@ -4,8 +4,8 @@
   background-color: $crust;
   .battery-icon {
     font-family: "Fira Code Nerd Font Mono";
-    margin: 0.3em;
-    font-size: 25px;
+    margin: 8px;
+    font-size: 23px;
   }
 }
 
@@ -23,5 +23,8 @@
 
 .charging {
   color: $blue;
-  font-size: 20px;
+  .battery-icon {
+    font-size: 15px;
+    margin: 10px;
+  }
 }
