@@ -15,27 +15,20 @@
         :xalign 0.5
         :yalign 0.5
     )
-(box :class "quote-box"
-    :orientation "v"
-    :space-evenly false
+        (box :class "quote-box"
+            :orientation "v"
+            :space-evenly false
 
 
-    (label
-        :class "quote"
-        :text "\"${quote}\""
-        :xalign 0.5
-        :yalign 0.5
-        :wrap true
-    )
+            (label
+                :class "quote"
+                :text "${quote}"
+                :xalign 0.5
+                :yalign 0.5
+                :wrap true
+            )
 
-    (label
-        :class "credits"
-        :text "~ Vaxry."
-        :xalign 1
-        :yalign 0.5
-        :wrap true
-    )
-)
+        )
   )
 )
 
