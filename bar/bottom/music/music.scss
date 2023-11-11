@@ -1,45 +1,49 @@
 .music-box {
-    padding: 5px;
+  padding: 5px;
 }
 
 .artist-initials {
-    color: $mauve;
-    font-size: 15px;
+  color: $mauve;
+  font-size: 10px;
 }
 
-.play-pause, .shuffle {
-    color: $mauve;
+.play-pause {
+  color: $mauve;
+  font-size: 10px;
+}
+
+.shuffle {
+  color: $mauve;
+
+  font-size: 13px;
 }
 
 .song-cover-art {
-    // background-image: url('/home/vagahbond/Pictures/pp.jpg');
-    background-size: cover;
+  // background-image: url('/home/vagahbond/Pictures/pp.jpg');
+  background-size: cover;
 }
 
 .music {
-    color: $mauve;
-    background-color: $crust;
+  color: $mauve;
+  background-color: $crust;
 }
 
 .next-previous {
-    color: $mauve;
-    font-size: 20px;
-    // padding-top: 10px;
-
+  color: $mauve;
+  font-size: 15px;
+  // padding-top: 10px;
 }
 
 .progress {
-    padding-top: 5px;
-    
-    trough {
-        background-color: $crust;
-        border-radius: 5px;
-    }
+  padding-top: 5px;
 
-    progress {
-        background-color: $mauve;
-        border-radius: 5px;
-    }
+  trough {
+    background-color: $crust;
+    border-radius: 5px;
+  }
 
+  progress {
+    background-color: $mauve;
+    border-radius: 5px;
+  }
 }
-
