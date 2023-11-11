@@ -12,7 +12,7 @@
 						:height "100%" 
 						:width "60px")
 	:monitor 0
-	:stacking "bg"
+	:stacking "fg"
 	:exclusive false
 	:focusable false 
 (bar))

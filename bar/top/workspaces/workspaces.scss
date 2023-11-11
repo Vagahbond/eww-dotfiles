@@ -1,3 +1,11 @@
+.workspaces-container {
+  margin: 2px;
+}
+
+.tiled .workspaces-container {
+  margin: 0px;
+}
+
 .workspaces-widget {
   font-family: FiraCode Mono;
   font-weight: bold;
@@ -12,7 +20,16 @@
   border-radius: 10px;
   padding: 5px 3px 5px 3px;
 
-  // background-color: $crust;
+  margin: 0px 7px 0px 7px;
+  //margin: 5px;
+}
+
+.workspace-entry > label {
+  //margin: -2px;
+}
+
+.tiled .workspace-entry > label {
+  //margin: 0px;
 }
 
 .workspace-entry.occupied {

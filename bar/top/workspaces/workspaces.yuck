@@ -6,6 +6,8 @@
   (eventbox :onscroll "bash ./bar/top/workspaces/change-active-workspace.sh {} ${current_workspace}" :class "workspaces-widget"
     (box :space-evenly true
          :orientation "V"
+         :class "workspaces-container"
+         :spacing 10
       (label :text "${workspaces}${current_workspace}" :visible false)
       (for workspace in workspaces
         (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
