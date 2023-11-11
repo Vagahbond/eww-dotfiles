@@ -7,10 +7,10 @@
 }
 
 .workspaces-widget {
-  font-family: FiraCode Mono;
-  font-weight: bold;
+  font-family: HeavyData Nerd Font Propo; //"3270 Nerd Font Propo"; // ProggyClean CE Nerd Font Propo;
+  // font-weight: regular;
 
-  font-size: 12px;
+  font-size: 17px;
   color: $mauve;
 }
 
@@ -18,14 +18,15 @@
   transition: background-color 1000ms linear;
 
   border-radius: 10px;
-  padding: 5px 3px 5px 3px;
+  padding: 5px 0px 5px 0px;
 
   margin: 0px 7px 0px 7px;
   //margin: 5px;
 }
 
 .workspace-entry > label {
-  //margin: -2px;
+  //margin-right: 3px;
+  margin-left: 3px;
 }
 
 .tiled .workspace-entry > label {

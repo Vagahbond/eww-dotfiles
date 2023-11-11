@@ -11,7 +11,7 @@ spaces (){
         | sed -E 's/lastwindow\":\"[^{"]*Mozilla Firefox\",/lastwindow":"󰈹",/g' \
         | sed -E 's/lastwindow\":\"[^{"]*Visual Studio Code[^}"]*\",/lastwindow":"󰨞",/g' \
         | sed -E 's/lastwindow\":\"[^{"]*(Neovim|vim)[^}"]*\",/lastwindow":"",/g' \
-        | sed -E 's/lastwindow\":\"[^{"]*Discord[^}]*\",/lastwindow":"󰙯",/g' \
+        | sed -E 's/lastwindow\":\"[^{"]*Cord[^}]*\",/lastwindow":"󰙯",/g' \
         | sed -E 's/lastwindow\":\"[^{"]*WhatsApp[^}"]*\",/lastwindow":"",/g' \
         | sed -E 's/lastwindow\":\"[^{"]*Spotify[^}"]*\",/lastwindow":"",/g' \
         | sed -E 's/lastwindow\":\"[^{"]*foot[^"}]*\",/lastwindow":"",/g' \
