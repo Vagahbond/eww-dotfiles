@@ -6,7 +6,7 @@
     ; :spacing -15
     (button
       :class "launcher-icon"
-      :onclick "wofi --show=drun --line=5 --prompt='' &"
+      :onclick "killall anyrun || anyrun"
       
       (image
         :class "launcher-icon-image"
