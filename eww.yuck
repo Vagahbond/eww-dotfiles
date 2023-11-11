@@ -10,9 +10,9 @@
 	:geometry (geometry :x "0" 
 						:y "0" 
 						:height "100%" 
-						:width "50px")
+						:width "60px")
 	:monitor 0
-	:stacking "fg"
+	:stacking "bg"
 	:exclusive false
 	:focusable false 
 (bar))
