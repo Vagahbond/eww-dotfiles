@@ -9,12 +9,14 @@
   background-color: rgba($background, 0.61);
   border-radius: 14px;
   color: $mauve;
-  font-family: "Fira Code Nerd Font Mono";
+  font-family: HeavyData Nerd Font Propo;
   font-size: 60px;
   padding: 5px;
   padding-top: 10px;
   margin: 20px;
-  box-shadow: 0.5rem 0.5rem 3px -3px rgba($crust, 0.6), 0 0 #ccc;
+  box-shadow:
+    0.5rem 0.5rem 3px -3px rgba($crust, 0.6),
+    0 0 #ccc;
 }
 
 .quote-box {
@@ -25,7 +27,9 @@
   font-size: 22px;
   margin: 20px;
   padding: 20px;
-  box-shadow: 0.5rem 0.5rem 3px -3px rgba($crust, 0.6), 0 0 #ccc;
+  box-shadow:
+    0.5rem 0.5rem 3px -3px rgba($crust, 0.6),
+    0 0 #ccc;
 }
 
 .credits {
